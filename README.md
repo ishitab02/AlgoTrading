@@ -37,25 +37,25 @@ algo_trading_system/
 #### 2. Installation
 
 1.  Clone this repository
-```
-git clone https://github.com/your-username/AlgoTrading.git
-```
-2.  Navigate to the project directory
+   ```bash
+   git clone https://github.com/your-username/AlgoTrading.git
    ```
-cd AlgoTrading
-```
-4.  Install all required packages:
+2.  Navigate to the project directory
+   ```bash
+   cd AlgoTrading
+   ```
+3.  Install all required packages
     ```bash
     pip install -r requirements.txt
     ```
-5.  Create a `.env` file in the project's root directory and add your credentials. See `.env.example` for the required format.
+4.  Create a `.env` file in the project's root directory and add your credentials. See `.env.example` for the required format.
     ```
     TELEGRAM_BOT_TOKEN="your_telegram_bot_token"
     TELEGRAM_CHAT_ID="your_telegram_chat_id"
     GOOGLE_CREDENTIALS_JSON="secrets/service_account.json"
     GOOGLE_SHEET_NAME="YourGoogleSheetName"
     ```
-6.  Place your Google Cloud `service_account.json` file inside the `/secrets` directory.
+5.  Place your Google Cloud `service_account.json` file inside the `/secrets` directory.
 
 #### 3. Execution
 
