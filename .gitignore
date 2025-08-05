@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+/algotrade/
+
+# Secrets and environment files
+/secrets/
+.env
+
