@@ -2,7 +2,7 @@
 
 This project is a Python-based prototype of an algorithmic trading system. It automatically fetches stock data for NIFTY 50 tickers, applies a "buy the dip" trading strategy, backtests its performance, and uses machine learning to predict future price movements. All results, trades, and analytics are logged to Google Sheets, with real-time notifications sent via Telegram.
 
-## ✨ Key Features
+## Key Features
 
 - **Automated Data Ingestion:** Fetches daily stock data from Yahoo Finance with built-in resilience (retries and fallbacks).
 - **Rule-Based Trading Strategy:** Implements a "buy the dip" strategy using RSI and Moving Average indicators.
@@ -11,7 +11,7 @@ This project is a Python-based prototype of an algorithmic trading system. It au
 - **Cloud Integration:** Logs all trades, daily signals, and summary analytics to Google Sheets in separate, organized tabs.
 - **Real-Time Alerts:** Sends start, completion, and error notifications to a Telegram chat.
 
-## 🏗️ Project Structure
+## Project Structure
 
 The project is built with a modular architecture to ensure clean separation of concerns:
 
@@ -27,7 +27,7 @@ algo_trading_system/
 └── telegram_notifier.py # Module for sending Telegram notifications
 ```
 
-## 🚀 Setup & Execution
+## Setup & Execution
 
 #### 1. Prerequisites
 
@@ -59,7 +59,7 @@ To run the entire system, execute the main module from the project's root direct
 python -m algo_trading_system.main
 ```
 
-## 📈 Strategy Deep Dive
+## Strategy Deep Dive
 
 The core strategy is to identify a short-term buying opportunity within a confirmed long-term uptrend.
 
@@ -79,7 +79,7 @@ A position is exited under two conditions to manage risk and lock in profits:
 
 The backtest results may show a low number of trades. This is an expected outcome and a feature of this highly selective strategy. The combination of an _extremely oversold_ condition (`RSI < 30`) occurring within an _established strong uptrend_ (`20-DMA > 50-DMA`) is inherently rare. This demonstrates that the system is working correctly by filtering for very specific, high-conviction setups as designed.
 
-## 🤖 Machine Learning Analytics
+## Machine Learning Analytics
 
 The project includes a bonus ML component to forecast next-day price direction.
 
@@ -87,7 +87,7 @@ The project includes a bonus ML component to forecast next-day price direction.
 - **Features:** A rich set of features is used, including RSI, MACD, various SMAs, volume indicators, volatility, and lagged values.
 - **Validation:** The models are validated using `TimeSeriesSplit` cross-validation. This is crucial for financial data as it respects the chronological order and prevents lookahead bias, providing a realistic measure of performance. The resulting low accuracy scores (~50%) are an honest reflection of the difficulty in predicting financial markets with basic models.
 
-## 📊 Outputs & Deliverables
+## Outputs & Deliverables
 
 The system generates the following outputs:
 
